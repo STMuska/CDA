@@ -7,11 +7,8 @@ WHERE NUMFOU = 09120;
 
 -- 2. Afficher le code des fournisseurs pour lesquels des commandes ont étépassées.
 
-SELECT fournis.NUMFOU
-FROM fournis
-JOIN entcom ON entcom.numfou = fournis.numfou
-GROUP BY NUMFOU;
-
+SELECT DISTINCT numfou
+FROM entcom;
 
 -- 3. Afficher le nombre de commandes fournisseurs passées, et le nombre de fournisseur concernés.
 
@@ -71,7 +68,7 @@ JOIN fournis ON fournis.numfou = entcom.numfou;
 
 -- 11. Sortir les produits des commandes ayant le mot "urgent' en observation? (Afficher le numéro de commande, le nom du fournisseur, le libellé duproduit et le sous total = quantité commandée * Prix unitaire)
 
-SELECT `entcom`numcom, nomfou, libart, priuni * qtecde AS Prix
+SELECT entcom.numcom, nomfou, libart, priuni * qtecde AS Prix
 FROM entcom 
 JOIN fournis ON entcom.numfou = fournis.numfou
 JOIN ligcom ON ligcom.numcom = entcom.numcom
