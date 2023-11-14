@@ -20,6 +20,9 @@ FROM employe;
 
 -- 5. Afficher les différentes valeurs des titres des employés.
 
+SELECT DISTINCT titre, nom
+FROM employe;
+
 -- 6. Afficher le nom, le numéro d'employé et le numéro du département des employés dont le titre est « Secrétaire ». 
 
 SELECT nom, noemp, nodep
