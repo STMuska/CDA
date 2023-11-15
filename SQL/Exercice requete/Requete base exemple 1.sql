@@ -103,7 +103,7 @@ FROM employe
 WHERE nodep > 41
 ORDER BY salaire DESC;
 
--- 20.Afficher le titre, le salaire et le nom des employés classés par titrecroissant et par salaire décroissant. 
+-- 20.Afficher le titre, le salaire et le nom des employés classés par titre croissant et par salaire décroissant. 
 
 SELECT titre, salaire, nom
 FROM employe
